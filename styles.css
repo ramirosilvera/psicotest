@@ -27,7 +27,7 @@ h1 {
 }
 
 p {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .question {
@@ -81,4 +81,30 @@ button:hover {
 #message {
     margin-top: 1rem;
     font-size: 1.2rem;
+}
+
+#whatsappLink {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#whatsappLink:hover {
+    background-color: #128c7e;
+}
+
+.footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.footer strong {
+    color: #ff6b6b;
 }
