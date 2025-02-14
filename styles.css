@@ -25,10 +25,12 @@ body {
 h1 {
     color: #ff6b6b;
     margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
 p {
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .question {
@@ -40,6 +42,7 @@ p {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .question select {
@@ -61,6 +64,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 1rem;
+    width: 100%;
 }
 
 button:hover {
@@ -90,6 +94,7 @@ button:hover {
     margin-top: 1rem;
     font-style: italic;
     color: #666;
+    font-size: 1rem;
 }
 
 .whatsapp-fixed {
@@ -121,4 +126,79 @@ button:hover {
 
 .footer strong {
     color: #ff6b6b;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .question label {
+        font-size: 0.9rem;
+    }
+
+    .question select {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    #message, #joke {
+        font-size: 1rem;
+    }
+
+    .whatsapp-fixed a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .question label {
+        font-size: 0.8rem;
+    }
+
+    .question select {
+        font-size: 0.8rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+
+    #message, #joke {
+        font-size: 0.9rem;
+    }
+
+    .whatsapp-fixed a {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .footer {
+        font-size: 0.7rem;
+    }
 }
