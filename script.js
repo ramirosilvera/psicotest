@@ -1,26 +1,26 @@
 const questions = [
     {
-        question: "¿Tu pareja controla tu forma de vestir o con quién pasas tiempo?",
+        question: "¿Tu pareja revisa tu teléfono o redes sociales sin tu permiso?",
         options: ["Nunca", "Rara vez", "A veces", "Frecuentemente", "Siempre"],
         scores: [0, 25, 50, 75, 100]
     },
     {
-        question: "¿Te sientes menospreciado/a o insultado/a por tu pareja?",
+        question: "¿Te hace sentir culpable por pasar tiempo con amigos o familiares?",
         options: ["Nunca", "Rara vez", "A veces", "Frecuentemente", "Siempre"],
         scores: [0, 25, 50, 75, 100]
     },
     {
-        question: "¿Tu pareja te hace sentir culpable por cosas que no son tu responsabilidad?",
+        question: "¿Te critica o humilla en público o en privado?",
         options: ["Nunca", "Rara vez", "A veces", "Frecuentemente", "Siempre"],
         scores: [0, 25, 50, 75, 100]
     },
     {
-        question: "¿Te sientes inseguro/a o con miedo de expresar tus opiniones?",
+        question: "¿Te ha amenazado con hacerte daño a ti o a alguien que quieres?",
         options: ["Nunca", "Rara vez", "A veces", "Frecuentemente", "Siempre"],
         scores: [0, 25, 50, 75, 100]
     },
     {
-        question: "¿Tu pareja te ha amenazado o intimidado de alguna manera?",
+        question: "¿Te controla el dinero o te impide trabajar o estudiar?",
         options: ["Nunca", "Rara vez", "A veces", "Frecuentemente", "Siempre"],
         scores: [0, 25, 50, 75, 100]
     }
@@ -31,7 +31,7 @@ const submitButton = document.getElementById("submit");
 const resultContainer = document.getElementById("result");
 const scoreDisplay = document.getElementById("score");
 const messageDisplay = document.getElementById("message");
-const jokeDisplay = document.getElementById("joke");
+const adviceDisplay = document.getElementById("advice");
 const whatsappLink = document.getElementById("whatsappLink");
 
 // Generar preguntas dinámicamente
@@ -68,29 +68,29 @@ submitButton.addEventListener("click", () => {
     scoreDisplay.textContent = averageScore.toFixed(0);
 
     let message = "";
-    let joke = "";
+    let advice = "";
     let whatsappMessage = "";
 
     if (averageScore < 20) {
-        message = "¡Sos un verdadero soberano! 🎉 Tu relación es sana y equilibrada.";
-        joke = "¿Sabías que el primo dice que sos tan sano que hasta los médicos te piden consejos? 😂";
-        whatsappMessage = "¡Hola! Según el test, soy un verdadero soberano. ¿Qué tal si charlamos?";
+        message = "Tu relación parece saludable. ¡Sigue así!";
+        advice = "Recuerda mantener una comunicación abierta y respetuosa.";
+        whatsappMessage = "Hola, según el test, mi relación es saludable. ¿Tienes algún consejo para mantenerla así?";
     } else if (averageScore < 50) {
-        message = "Hay algunas señales de alerta. 🚧 Presta atención a cómo te sientes.";
-        joke = "El primo dice que sos como un semáforo: a veces en verde, a veces en amarillo. 🚦";
+        message = "Hay algunas señales de alerta. Presta atención a cómo te sientes.";
+        advice = "Reflexiona sobre estos comportamientos y considera hablar con un profesional.";
         whatsappMessage = "Hola, según el test, mi relación tiene algunas señales de alerta. ¿Me das algún consejo?";
     } else if (averageScore < 80) {
-        message = "Sos un dominacho. 😬 Tu relación tiene aspectos tóxicos. Considera hablar con un profesional.";
-        joke = "El primo dice que sos tan dominacho que hasta el Joker te tiene miedo. 🃏";
-        whatsappMessage = "Hola, según el test, soy un dominacho. ¿Me ayudas a mejorar mi relación?";
+        message = "Tu relación tiene aspectos tóxicos. Considera buscar ayuda.";
+        advice = "Es importante que hables con alguien de confianza o un especialista.";
+        whatsappMessage = "Hola, según el test, mi relación tiene aspectos tóxicos. ¿Me ayudas?";
     } else {
-        message = "¡SOS UN DOMINACHO TOTAL! 🚨 Tu relación es muy tóxica. Busca ayuda lo antes posible.";
-        joke = "El primo dice que sos tan tóxico que hasta Chernóbil te pide consejos. ☢️";
-        whatsappMessage = "¡Urgente! Según el test, soy un dominacho total. ¿Podemos hablar?";
+        message = "Tu relación es muy tóxica. Busca ayuda lo antes posible.";
+        advice = "No estás solo/a. Contacta a un especialista o a una organización de apoyo.";
+        whatsappMessage = "¡Urgente! Según el test, mi relación es muy tóxica. ¿Podemos hablar?";
     }
 
     messageDisplay.textContent = message;
-    jokeDisplay.textContent = joke;
+    adviceDisplay.textContent = advice;
 
     // Configurar el enlace de WhatsApp
     const phoneNumber = "1121726140";
