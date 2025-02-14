@@ -1,27 +1,27 @@
 const questions = [
     {
-        question: "¿Tu pareja revisa tu teléfono o redes sociales sin tu permiso?",
-        options: ["Nunca", "Rara vez", "A veces", "Frecuentemente", "Siempre"],
+        question: "¿Tu pareja se interesa por tus actividades y respeta tu espacio personal?",
+        options: ["Siempre", "Frecuentemente", "A veces", "Rara vez", "Nunca"],
         scores: [0, 25, 50, 75, 100]
     },
     {
-        question: "¿Te hace sentir culpable por pasar tiempo con amigos o familiares?",
-        options: ["Nunca", "Rara vez", "A veces", "Frecuentemente", "Siempre"],
+        question: "¿Te sientes cómodo/a compartiendo tus opiniones sin miedo a ser juzgado/a?",
+        options: ["Siempre", "Frecuentemente", "A veces", "Rara vez", "Nunca"],
         scores: [0, 25, 50, 75, 100]
     },
     {
-        question: "¿Te critica o humilla en público o en privado?",
-        options: ["Nunca", "Rara vez", "A veces", "Frecuentemente", "Siempre"],
+        question: "¿Tu pareja te apoya cuando pasas tiempo con amigos o familiares?",
+        options: ["Siempre", "Frecuentemente", "A veces", "Rara vez", "Nunca"],
         scores: [0, 25, 50, 75, 100]
     },
     {
-        question: "¿Te ha amenazado con hacerte daño a ti o a alguien que quieres?",
-        options: ["Nunca", "Rara vez", "A veces", "Frecuentemente", "Siempre"],
+        question: "¿Te sientes valorado/a y respetado/a en tu relación?",
+        options: ["Siempre", "Frecuentemente", "A veces", "Rara vez", "Nunca"],
         scores: [0, 25, 50, 75, 100]
     },
     {
-        question: "¿Te controla el dinero o te impide trabajar o estudiar?",
-        options: ["Nunca", "Rara vez", "A veces", "Frecuentemente", "Siempre"],
+        question: "¿Puedes tomar decisiones importantes sin sentir presión o culpa?",
+        options: ["Siempre", "Frecuentemente", "A veces", "Rara vez", "Nunca"],
         scores: [0, 25, 50, 75, 100]
     }
 ];
@@ -72,21 +72,21 @@ submitButton.addEventListener("click", () => {
     let whatsappMessage = "";
 
     if (averageScore < 20) {
-        message = "Tu relación parece saludable. ¡Sigue así!";
-        advice = "Recuerda mantener una comunicación abierta y respetuosa.";
-        whatsappMessage = "Hola, según el test, mi relación es saludable. ¿Tienes algún consejo para mantenerla así?";
+        message = "Tu relación parece muy saludable. ¡Felicidades!";
+        advice = "Sigue fomentando la comunicación y el respeto mutuo.";
+        whatsappMessage = "Hola, según el test, mi relación es muy saludable. ¿Tienes algún consejo para mantenerla así?";
     } else if (averageScore < 50) {
-        message = "Hay algunas señales de alerta. Presta atención a cómo te sientes.";
-        advice = "Reflexiona sobre estos comportamientos y considera hablar con un profesional.";
-        whatsappMessage = "Hola, según el test, mi relación tiene algunas señales de alerta. ¿Me das algún consejo?";
+        message = "Tu relación tiene aspectos positivos, pero hay áreas para mejorar.";
+        advice = "Reflexiona sobre cómo te sientes y habla con tu pareja para fortalecer la relación.";
+        whatsappMessage = "Hola, según el test, mi relación tiene áreas para mejorar. ¿Me das algún consejo?";
     } else if (averageScore < 80) {
-        message = "Tu relación tiene aspectos tóxicos. Considera buscar ayuda.";
-        advice = "Es importante que hables con alguien de confianza o un especialista.";
-        whatsappMessage = "Hola, según el test, mi relación tiene aspectos tóxicos. ¿Me ayudas?";
+        message = "Tu relación tiene algunas señales que podrían afectar tu bienestar.";
+        advice = "Considera hablar con alguien de confianza o un especialista para reflexionar sobre tu relación.";
+        whatsappMessage = "Hola, según el test, mi relación tiene algunas señales preocupantes. ¿Me ayudas?";
     } else {
-        message = "Tu relación es muy tóxica. Busca ayuda lo antes posible.";
-        advice = "No estás solo/a. Contacta a un especialista o a una organización de apoyo.";
-        whatsappMessage = "¡Urgente! Según el test, mi relación es muy tóxica. ¿Podemos hablar?";
+        message = "Tu relación tiene aspectos que podrían ser dañinos para ti.";
+        advice = "No estás solo/a. Busca apoyo de un especialista o una organización de confianza.";
+        whatsappMessage = "¡Urgente! Según el test, mi relación tiene aspectos preocupantes. ¿Podemos hablar?";
     }
 
     messageDisplay.textContent = message;
