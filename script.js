@@ -31,6 +31,7 @@ const submitButton = document.getElementById("submit");
 const resultContainer = document.getElementById("result");
 const scoreDisplay = document.getElementById("score");
 const messageDisplay = document.getElementById("message");
+const jokeDisplay = document.getElementById("joke");
 const whatsappLink = document.getElementById("whatsappLink");
 
 // Generar preguntas dinámicamente
@@ -67,29 +68,34 @@ submitButton.addEventListener("click", () => {
     scoreDisplay.textContent = averageScore.toFixed(0);
 
     let message = "";
+    let joke = "";
     let whatsappMessage = "";
 
     if (averageScore < 20) {
         message = "¡Sos un verdadero soberano! 🎉 Tu relación es sana y equilibrada.";
+        joke = "¿Sabías que el primo dice que sos tan sano que hasta los médicos te piden consejos? 😂";
         whatsappMessage = "¡Hola! Según el test, soy un verdadero soberano. ¿Qué tal si charlamos?";
     } else if (averageScore < 50) {
         message = "Hay algunas señales de alerta. 🚧 Presta atención a cómo te sientes.";
+        joke = "El primo dice que sos como un semáforo: a veces en verde, a veces en amarillo. 🚦";
         whatsappMessage = "Hola, según el test, mi relación tiene algunas señales de alerta. ¿Me das algún consejo?";
     } else if (averageScore < 80) {
         message = "Sos un dominacho. 😬 Tu relación tiene aspectos tóxicos. Considera hablar con un profesional.";
+        joke = "El primo dice que sos tan dominacho que hasta el Joker te tiene miedo. 🃏";
         whatsappMessage = "Hola, según el test, soy un dominacho. ¿Me ayudas a mejorar mi relación?";
     } else {
         message = "¡SOS UN DOMINACHO TOTAL! 🚨 Tu relación es muy tóxica. Busca ayuda lo antes posible.";
+        joke = "El primo dice que sos tan tóxico que hasta Chernóbil te pide consejos. ☢️";
         whatsappMessage = "¡Urgente! Según el test, soy un dominacho total. ¿Podemos hablar?";
     }
 
     messageDisplay.textContent = message;
+    jokeDisplay.textContent = joke;
 
     // Configurar el enlace de WhatsApp
     const phoneNumber = "1121726140";
     const encodedMessage = encodeURIComponent(whatsappMessage);
     whatsappLink.href = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    whatsappLink.classList.remove("hidden");
 
     resultContainer.classList.remove("hidden");
 });
