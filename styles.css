@@ -8,7 +8,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
@@ -47,6 +48,7 @@ p {
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 1rem;
+    background-color: #f9f9f9;
 }
 
 button {
@@ -58,6 +60,7 @@ button {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 1rem;
 }
 
 button:hover {
@@ -83,9 +86,20 @@ button:hover {
     font-size: 1.2rem;
 }
 
-#whatsappLink {
-    display: inline-block;
+#joke {
     margin-top: 1rem;
+    font-style: italic;
+    color: #666;
+}
+
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.whatsapp-fixed a {
+    display: inline-block;
     padding: 0.75rem 1.5rem;
     background-color: #25d366;
     color: white;
@@ -95,7 +109,7 @@ button:hover {
     transition: background-color 0.3s ease;
 }
 
-#whatsappLink:hover {
+.whatsapp-fixed a:hover {
     background-color: #128c7e;
 }
 
